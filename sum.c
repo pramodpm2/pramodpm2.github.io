@@ -8,7 +8,10 @@ main ()
 
   for (i = 0; i < n; i++)
     {
-      sum = sum + i;
+      if (i % 2 == 0)
+	{
+	  sum = sum + i;
+	}
     }
   printf ("sum=%d", sum);
 }
