@@ -1,15 +1,12 @@
 #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
 void main()
 {
-    int t=1,c=0,d=0;
-    scanf("%d",&t);
-    if(t<=10)
-    {
-        while(c<t)
-        {
-            int k,n,i=0,j,a[1000],small=0;
+    int l=1;
+    scanf("%d",&l);
+   
+       while(l<=10)
+       {
+          int k,n,i=0,j,a[1000],small=0;
             scanf("%d",&n);
             scanf("%d",&k);
             for(i=0;i<n;i++)
@@ -24,22 +21,14 @@ void main()
                     small=a[i];
                 }
             }
-            if(small==k)
+            
+            if(small<k)
             {
-                printf("%d",d);
+                printf("%d",k-small);
             }
             else
             {
-                while(small<k)
-                {
-                    small++;
-                    d++;
-                }
-                printf("%d",d);
-                small=0;
-                d=0;
-                c++;
+                printf("0\n");
             }
-        }
-    }
-}
+       }  
+}      
