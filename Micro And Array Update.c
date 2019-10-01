@@ -3,8 +3,8 @@ void main()
 {
     int l=1;
     scanf("%d",&l);
-   
-       while(l<=10)
+   if(l>=1&&l<=10)
+       while(l>0)
        {
           int k,n,i=0,j,a[1000],small=0;
             scanf("%d",&n);
@@ -24,11 +24,13 @@ void main()
             
             if(small<k)
             {
-                printf("%d",k-small);
+                printf("%d\n",k-small);
             }
             else
             {
+               
                 printf("0\n");
             }
+            l--;
        }  
 }      
