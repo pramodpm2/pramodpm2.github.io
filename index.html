@@ -1,194 +1,289 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en' class=''>
 <head>
-<meta charset="UTF-8">
+<script src="https://static.codepen.io/assets/editor/live/console_runner-1df7d3399bdc1f40995a35209755dcfd8c7547da127f6469fd81e5fba982f6af.js"></script>
+<script src="https://static.codepen.io/assets/editor/live/css_reload-5619dc0905a68b2e6298901de54f73cefe4e079f65a75406858d92924b4938bf.js"></script>
+<meta charset='UTF-8'>
+<meta name="robots" content="noindex">
 <link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
 <link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
-<title>CodePen - CSS Portfolio Card</title>
-<style>
-  body{
-  background-image: url('http://urbanfragment.files.wordpress.com/2012/10/mount-fuji-highest-mountain-in-japan-osx-lion-wallpaper.jpg');
-	background-size:100% 100%;
-	font-family:"Open Sans", sans-serif;
+<link rel="canonical" href="https://codepen.io/knaman2609/pen/Zbyjvv" />
+<style class="cp-pen-styles">
+          * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-a.nostyle{
-	color:inherit;
-	text-decoration:none;
-	padding:0;
-	margin:0;
+
+html {
+  height: 100%;
 }
-div.portfoliocard{
-	position:relative;
-	height:450px; 
-	width:400px;
-	background:rgba(255,255,255,1);
-	border:1px solid rgba(0,0,0,0.7);
-	box-shadow:0px -1px 3px rgba(0,0,0,0.1),
-				0px 2px 6px rgba(0,0,0,0.5);
-	border-radius:6px;
-	margin:10% auto;
-	overflow:hidden;
-	z-index:100;
+
+body {
+  min-height: 100%;
+  background: #eee;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 14px;
+  line-height: 26px;
+  padding-bottom: 50px;
 }
-div.portfoliocard div.coverphoto{
-	width:100%;
-	height:120px;
-	background:url('http://farm8.staticflickr.com/7149/6484148411_baf8d2e934_z.jpg');
-	background-position:center center;
-	border-top-right-radius:5px;
-	border-top-left-radius:5px;
-	border-bottom:1px solid rgba(0,0,0,0.1);
-	box-shadow:inset 0px 3px 20px rgba(255,255,255,0.3),
-				1px 0px 2px rgba(255,255,255,0.7);
-	z-index:99;
+
+.container {
+  max-width: 700px;
+  background: #fff;
+  margin: 0px auto 0px;
+  box-shadow: 1px 1px 2px #DAD7D7;
+  border-radius: 3px;
+  padding: 40px;
+  margin-top: 50px;
 }
-div.portfoliocard div.left_col, div.portfoliocard div.right_col{
-	float:left;
-	height:340px;
+
+.header {
+  margin-bottom: 30px;
 }
-div.portfoliocard div.left_col{
-	width:40%;
-	padding-top:85px;
-	box-sizing:border-box;  
+.header .full-name {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
-div.portfoliocard div.right_col{
-	width:60%;
-	background:rgba(245,245,245,1);
-	border-left:1px solid rgba(230,230,230,1);
-	box-shadow:inset 0px 1px 1px rgba(255,255,255,0.7);
-	margin-left:-1px;
-	border-bottom-right-radius:5px;
+.header .first-name {
+  font-weight: 700;
 }
-div.portfoliocard div.profile_picture{
-	width:110px;
-	height:110px;
-	background:rgba(255,255,255,1);
-	position:absolute;
-	top:65px;
-	left:40px;
-	border-radius:100%;
-	background-image: url('http://cache.spreadshirt.net/Public/Common/images/profile-pic-placeholder_130x130.png');
-	background-size:100% 100%;
-	padding:7px;
-	border:4px solid rgba(255,255,255,1)
+.header .last-name {
+  font-weight: 300;
 }
-div.portfoliocard div.right_col h2.name{
-	font-size:30px;
-	font-weight:300;
-	color: rgba(30,30,30,1);
-	padding:0;
-	margin:20px 10px 0px 30px;
+.header .contact-info {
+  margin-bottom: 20px;
 }
-div.portfoliocard div.right_col h3.location{
-	font-size:15px;
-	font-weight:300;
-	color:rgba(170,170,170,1);
-	padding:0;
-	margin:-5px 10px 10px 30px;
+.header .email,
+.header .phone {
+  color: #999;
+  font-weight: 300;
 }
-div.portfoliocard ul.contact_information{
-	margin-top:20px;
-	padding-left:30px;
-	list-style-type:none;
+.header .separator {
+  height: 10px;
+  display: inline-block;
+  border-left: 2px solid #999;
+  margin: 0px 10px;
 }
-div.portfoliocard ul.contact_information li{
-	height:25px;
-	width:180px;
-	line-height:25px;
-	font-weight:300;
-	font-size:15px;
-	color:rgba(140,140,140,1);
-	text-shadow:1px 1px 1px rgba(255,255,255,0.8);
-	padding:5px 0px;
-	background-repeat:no-repeat;
-	background-size:18px 18px;
-	border-bottom:1px solid rgba(0,0,0,0.1);
-	box-shadow:0px 1px 1px rgba(255,255,255,0.6);
-	cursor:default;
+.header .position {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: underline;
 }
-div.portfoliocard ul.contact_information li:before{
-	content:"";
-	width:25px;
-	height:25px;
-	display:block;
-	float:left;
-	background-position:center;
-	background-size:18px 18px;
-	background-repeat:no-repeat;
-	margin-right:5px;
-	opacity:0.7;
+
+.details {
+  line-height: 20px;
 }
-div.portfoliocard ul.contact_information li:hover:before{
-	opacity:1;
+.details .section {
+  margin-bottom: 40px;
 }
-div.portfoliocard ul.contact_information li.work:before{
-	background-image: url('http://schulzmarcel.de/x/icons/case_24.png');
+.details .section:last-of-type {
+  margin-bottom: 0px;
 }
-div.portfoliocard ul.contact_information li.website:before{
-	background-image: url('http://schulzmarcel.de/x/icons/globe_24.png');
+.details .section__title {
+  letter-spacing: 2px;
+  color: #54AFE4;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
-div.portfoliocard ul.contact_information li.mail:before{
-	background-image: url('http://schulzmarcel.de/x/icons/paper_plane_24.png');
+.details .section__list-item {
+  margin-bottom: 40px;
 }
-div.portfoliocard ul.contact_information li.phone:before{
-	background-image: url('http://schulzmarcel.de/x/icons/phone_24.png');
+.details .section__list-item:last-of-type {
+  margin-bottom: 0;
 }
-div.portfoliocard ul.contact_information li.resume:before{
-	background-image: url('http://schulzmarcel.de/x/icons/inbox_24.png');
+.details .left,
+.details .right {
+  vertical-align: top;
+  display: inline-block;
 }
-div.portfoliocard div.followers, div.portfoliocard div.following{
-	margin:15px 0px 0px 35px;
-	font-weight:300;
-	font-size:16px;
-	color:rgba(30,30,30,1);
+.details .left {
+  width: 60%;
 }
-div.portfoliocard div.follow_count{
-	font-weight:400;
-	font-size:25px;
-	color:rgba(140,140,140,1);
+.details .right {
+  tex-align: right;
+  width: 39%;
 }
-</style>
-<script>
-  window.console = window.console || function(t) {};
-</script>
-<script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-</head>
-<body translate="no">
-<html>
-<head>
-<link rel="stylesheet" type="text/CSS" href="style.css" />
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+.details .name {
+  font-weight: bold;
+}
+.details a {
+  text-decoration: none;
+  color: #000;
+  font-style: italic;
+}
+.details a:hover {
+  text-decoration: underline;
+  color: #000;
+}
+.details .skills__item {
+  margin-bottom: 10px;
+}
+.details .skills__item .right input {
+  display: none;
+}
+.details .skills__item .right label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #C3DEF3;
+  border-radius: 20px;
+  margin-right: 3px;
+}
+.details .skills__item .right input:checked + label {
+  background: #79A9CE;
+}
+
+        </style>
 </head>
 <body>
-<div class="portfoliocard">
-<div class="coverphoto"></div>
-<div class="profile_picture"></div>
-<div class="left_col">
-
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<div class="container">
+<div class="header">
+<div class="full-name">
+<span class="first-name">Pramod</span>
+<span class="last-name">p m</span>
+</div>
+<div class="contact-info">
+<span class="email">Email: </span>
+<span class="email-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c6c6e7d7173786c715c7b717d7570327f7371">[email&#160;protected]</a></span>
+<span class="separator"></span>
+<span class="phone">Phone: </span>
+<span class="phone-val">+91 7619266411</span>
+</div>
+<div class="about">
+<span class="position">Front-End Developer </span>
+<span class="desc">
+I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.
+</span>
 </div>
 </div>
-<div class="right_col">
-<h2 class="name">Pramod p m</h2>
-<h3 class="location">karnataka,india</h3>
-<ul class="contact_information">
-<li class="work">student</li>
-<li class="website"><a class="nostyle" href="#"></a></li>
-<li class="mail"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="315b5e595f1f555e54715041415d541f525e5c">[pramodpm6363@gmail.com]</a></li>
-<li class="phone">+91 7619266411</li>
-<li class="resume"><a href="#" class="nostyle"></a></li>
-</ul>
+<div class="details">
+<div class="section">
+<div class="section__title">Experience</div>
+<div class="section__list">
+<div class="section__list-item">
+<div class="left">
+<div class="name"></div>
+<div class="addr"></div>
+<div class="duration"></div>
+</div>
+<div class="right">
+<div class="name"></div>
+<div class="desc"></div>
 </div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
-</html>
-<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
-<script id="rendered-js">
-      /*** rebuilt http://dribbble.com/shots/790267-Mini-Profile-PS with CSS **/
-      //# sourceURL=pen.js
-    </script>
+<div class="section__list-item">
+<div class="left">
+<div class="name"></div>
+<div class="addr"></div>
+<div class="duration"></div>
+</div>
+<div class="right">
+<div class="name"></div>
+<div class="desc"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section__title">Education</div>
+<div class="section__list">
+<div class="section__list-item">
+<div class="left">
+<div class="name">Alva's Institute Engineering And technology</div>
+<div class="addr">Moodabidri,karnataka,india</div>
+<div class="duration">Aug 2018 - July 2022</div>
+</div>
+<div class="right">
+<div class="name">Fr developer</div>
+<div class="desc">did This and that</div>
+</div>
+</div>
+<div class="section__list-item">
+<div class="left">
+<div class="name">Akount</div>
+<div class="addr">Shivamogga,Karnataka</div>
+<div class="duration">Aug 2018 - July 2022</div>
+</div>
+<div class="right">
+<div class="name">Fr developer</div>
+<div class="desc">Created College Website And Database</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section__title">Projects</div>
+<div class="section__list">
+<div class="section__list-item">
+<div class="name">DSP</div>
+<div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+</div>
+<div class="section__list-item">
+<div class="name">DSP</div>
+<div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section__title">Skills</div>
+<div class="skills">
+<div class="skills__item">
+<div class="left"><div class="name">
+C , C++ , Python , Java , Java Script , .Net
+</div></div>
+<div class="right">
+<input id="ck1" type="checkbox" checked />
+<label for="ck1"></label>
+<input id="ck2" type="checkbox" checked />
+<label for="ck2"></label>
+<input id="ck3" type="checkbox" />
+<label for="ck3"></label>
+<input id="ck4" type="checkbox" />
+<label for="ck4"></label>
+<input id="ck5" type="checkbox" />
+<label for="ck5"></label>
+</div>
+</div>
+</div>
+<div class="skills__item">
+<div class="left"><div class="name">
+Html,CSS</div></div>
+<div class="right">
+<input id="ck1" type="checkbox" checked />
+<label for="ck1"></label>
+<input id="ck2" type="checkbox" checked />
+<label for="ck2"></label>
+<input id="ck3" type="checkbox" />
+<label for="ck3"></label>
+<input id="ck4" type="checkbox" />
+<label for="ck4"></label>
+<input id="ck5" type="checkbox" />
+<label for="ck5"></label>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="section__title">
+Interests
+</div>
+<div class="section__list">
+<div class="section__list-item">
+Coding , Problem Solving, Machin Learning , Hacking
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 </html>
