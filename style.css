@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "cursive", sans-serif;
+  
+
+}
+body{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+ background-color: White;
+ position: relative;
+}
+.profile{
+   background: linear-gradient(90deg,blue 20%, fuchsia);
+}
+.profile .contentBx p {
+   
+   text-align: center;
+   display: flex;
+   color: white;
+ }
+ .profile .contentBx i,h2{
+   color: white;
+ }
+ .profile .imgBx  {
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+  
+}
+.profile .imgBx img{
+  position: center;
+  margin-top: 30px;
+}
+
+.profile .contentBx {
+   position: relative;
+   margin-top:20px;
+   text-align: center;
+ }
+ .skills{
+   
+   
+   align-self: center;
+   position: relative;
+   font-family:"sans-serif";
+   list-style:none;
+   width: 500px;
+   margin: 60px auto;
+   color: black;
+ }
+ .skills .li{
+   margin: 20px 0;
+ }
+ 
+ .bar{
+   background: #353b48;
+   display: block;
+   height: 20px;
+   border: 1px solid rgba(0, 0, 0, 0.3);
+   border-radius:3px;
+   overflow: hidden;
+   box-shadow: 0 0 10px #2187e7b3;
+ }
+ .bar span{
+   height: 20px;
+   float: left;
+   background: #2187c7;
+ }
+ .html{
+   width: 60%;
+   animation: html 2s;
+ }
+ 
+ .css {
+   width: 50%;
+   animation: css 2s;
+ }
+ 
+ 
+ .c{
+   width: 70%;
+   animation: c 2s;
+ }
+ 
+ .java {
+   width: 60%;
+   animation: java 2s;
+ }
+ 
+ .python {
+   width: 60%;
+   animation: python 2s;
+ }
+ 
+ @keyframes html{
+   0%{
+     width:0%;
+   }
+   100%{
+     width: 60%;
+   }
+ }
+ @keyframes css {
+   0% {
+     width: 0%;
+   }
+ 
+   100% {
+     width: 50%;
+   }
+ }
+ 
+ @keyframes c {
+   0% {
+     width: 0%;
+   }
+ 
+   100% {
+     width: 70%;
+   }
+ }
+ 
+ 
+ @keyframes java {
+   0% {
+     width: 0%;
+   }
+ 
+   100% {
+     width: 60%;
+   }
+ }
+ 
+ @keyframes python {
+   0% {
+     width: 0%;
+   }
+ 
+   100% {
+     width: 60%;
+   }
+ }
+ .about{
+   background: white;
+   font-family: sans-serif;
+   text-align: center;
+   
+ }
+ .about h2{
+   color: black;
+ }
+ .about i{
+   color:black;
+   
+ }
+ 
+ 
+ .contact{
+   list-style: none;
+   text-align: center;
+   position: relative;
+   color: black;
+ }
+ 
+
+ 
