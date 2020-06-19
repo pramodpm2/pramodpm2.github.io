@@ -17,6 +17,8 @@ body{
 }
 .profile{
    background: linear-gradient(90deg,blue 20%, fuchsia);
+  margin:10px;
+
 }
 .profile .contentBx p {
    
